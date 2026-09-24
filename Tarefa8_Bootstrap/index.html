@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+    <header >
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+            <a class="navbar-brand" href="#">Logo</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav" >
+                
+                <li class="nav-item "><a href="#" class="nav-link">Descubra</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Preços</a>
+                    <ul class="dropdown-menu navbar-light bg-light">
+                        <li ><a class="dropdown-item" href="#">Paisagem</a></li>
+                        <li ><a class="dropdown-item" href="#">Tecnologia</a></li>
+                        <li><a class="dropdown-item"  href="#">Abstrato</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item "><a href="#" class="nav-link">Cadastre-se</a></li>
+                <li class="nav-item "><a href="#" class="nav-link">Login</a></li>
+            </ul>
+            </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron ">
+            <div class="container">
+                <h1 class="display-4">Hello, world!</h1>
+                <p class="lead">Lorem ipsum dolor.</p>
+                
+                <div class="input-group mb-3">
+                    <input type="text"   
+                        class="form-control" placeholder="Busque sua foto">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" 
+                        type="button">Pesquisar
+                        </button>
+                    </div>
+                </div>
+</div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="galeria" class="container mb-5 pb-4">
+            <div class="text-center mb-5">
+                <h2 class="h3 font-weight-normal text-dark mb-2">Imagens bonitas, lindas e perfeitas</h2>
+                <p class="text-muted small">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="row">
+    
+                <div class="col-md-4 mb-4">
+                    <div class="card-img-wrapper mb-2">
+                        <img src="assets/img/img/cabra.jpg" alt="Foto 1" class="img-fluid site-img">
+                    </div>
+                    <p class="text-muted small mb-0">Lorem ipsum</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card-img-wrapper mb-2">
+                        <img src="assets/img/img/sunset.jpg" alt="Foto 2" class="img-fluid site-img">
+                    </div>
+                    <p class="text-muted small mb-0">Lorem ipsum</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card-img-wrapper mb-2">
+                        <img src="assets/img/img/pipoca.jpg" alt="Foto 3" class="img-fluid site-img">
+                    </div>
+                    <p class="text-muted small mb-0">Lorem ipsum</p>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card-img-wrapper mb-2">
+                        <img src="assets/img/img/girassois.jpg" alt="Foto 4" class="img-fluid site-img">
+                    </div>
+                    <p class="text-muted small mb-0">Lorem ipsum</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card-img-wrapper mb-2">
+                        <img src="assets/img/img/mesa-designer.jpg" alt="Foto 5" class="img-fluid site-img">
+                    </div>
+                    <p class="text-muted small mb-0">Lorem ipsum</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card-img-wrapper mb-2">
+                        <img src="assets/img/img/bones-vitrine.jpg" alt="Foto 6" class="img-fluid site-img">
+                    </div>
+                    <p class="text-muted small mb-0">Lorem ipsum</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mb-5 pb-4">
+            <div class="hall-da-fama-box">
+                <div class="row align-items-center">
+                    <div class="col-md-5 mb-4 mb-md-0">
+                        <h2 class="h1 font-weight-normal text-dark mb-3">Hall da fama</h2>
+                        <p class="text-muted mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                        <button class="btn btn-wireframe-dark">VOTE</button>
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class="card-img-wrapper mb-2">
+                            <img src="assets/img/img/ciclista.jpg" alt="Destaque Hall da Fama" class="img-fluid site-img site-img-lg">
+                        </div>
+                        <p class="text-muted small mb-0">Lorem ipsum</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mb-5 pb-4">
+            <h2 class="h3 font-weight-normal text-dark mb-4">Reviews</h2>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="d-flex align-items-start">
+                        <img src="assets/img/img/garota-feliz.jpg" alt="Fulano Souza" class="user-avatar mr-3">
+                        <div>
+                            <h6 class="font-weight-normal text-secondary mb-1">Fulano Souza</h6>
+                            <p class="text-muted small mb-0">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem libero, repellendus totam consequuntur esse soluta rem beatae sapiente veniam natus cumque?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="d-flex align-items-start">
+                        <img src="assets/img/img/garota-silhueta.jpg" alt="Fulano Souza" class="user-avatar mr-3">
+                        <div>
+                            <h6 class="font-weight-normal text-secondary mb-1">Fulano Souza</h6>
+                            <p class="text-muted small mb-0">
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem libero, repellendus totam consequuntur esse soluta rem beatae sapiente veniam natus cumque?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="d-flex align-items-start">
+                        <img src="assets/img/img/garota-feliz.jpg" alt="Fulano Souza" class="user-avatar mr-3">
+                        <div>
+                            <h6 class="font-weight-normal text-secondary mb-1">Fulano Souza</h6>
+                            <p class="text-muted small mb-0">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem libero, repellendus totam consequuntur esse soluta rem beatae sapiente veniam natus cumque?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="d-flex align-items-start">
+                        <img src="assets/img/img/garota-silhueta.jpg" alt="Fulano Souza" class="user-avatar mr-3">
+                        <div>
+                            <h6 class="font-weight-normal text-secondary mb-1">Fulano Souza</h6>
+                            <p class="text-muted small mb-0">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem libero, repellendus totam consequuntur esse soluta rem beatae sapiente veniam natus cumque?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="precos" class="container mb-5 pb-4">
+            <h2 class="h3 font-weight-normal text-dark mb-4">Planos para todos os bolsos:</h2>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="pricing-card">
+                        <h3 class="h5 text-uppercase font-weight-normal text-secondary mb-3">SILVER</h3>
+                        <div class="price">R$ 9,99</div>
+                        <ul class="pricing-features-list">
+                            <li>3x lorem</li>
+                            <li>3x lorem</li>
+                            <li>3x lorem</li>
+                        </ul>
+                        <button class="btn btn-wireframe-dark">Ok</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="pricing-card">
+                        <h3 class="h5 text-uppercase font-weight-normal text-secondary mb-3">CRYSTAL</h3>
+                        <div class="price">R$ 9,99</div>
+                        <ul class="pricing-features-list">
+                            <li>3x lorem</li>
+                            <li>3x lorem</li>
+                            <li>3x lorem</li>
+                        </ul>
+                        <button class="btn btn-wireframe-dark">Ok</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="pricing-card">
+                        <h3 class="h5 text-uppercase font-weight-normal text-secondary mb-3">GOLD</h3>
+                        <div class="price">R$ 9,99</div>
+                        <ul class="pricing-features-list">
+                            <li>3x lorem</li>
+                            <li>3x lorem</li>
+                            <li>3x lorem</li>
+                        </ul>
+                        <button class="btn btn-wireframe-dark">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                Copyright 2019
+            </div>
+            <div class="d-flex align-items-center">
+            <a href="#" class="social-box" title="Rede Social 1">
+                <img src="assets/img/img/icone-face.png" alt="Social 1" class="social-icon">
+            </a>
+            <a href="#" class="social-box" title="Rede Social 2">
+                <img src="assets/img/img/icone-insta.png" alt="Social 2" class="social-icon">
+            </a>
+            <a href="#" class="social-box" title="Rede Social 3">
+                <img src="assets/img/img/icone-twitter.png" alt="Social 3" class="social-icon">
+            </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="assets/js/js/jquery.js"></script>
+<script src="assets/js/js/bootstrap.min.js"></script>
+</html>
