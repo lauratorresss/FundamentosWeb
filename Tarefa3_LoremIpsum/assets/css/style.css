@@ -1,0 +1,161 @@
+body, h1, h2, h3,ul {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header, footer{
+    background-color: rgb(32, 21,2);
+    color: #fff;
+    height: 250px
+
+}
+
+header h1{
+    padding-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+header p{
+    color: #ffffff52;
+    text-align: center;
+}
+
+header a{
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav {
+    margin: auto;
+    text-transform: uppercase;
+}
+
+
+.header-navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+    margin-top: 50px;
+}
+
+.header-navegacao li a {
+    color: #fff;
+    font-size: .7rem;
+    letter-spacing: 2px;
+}
+
+
+.fundo-laranja {
+    background-color: rgb(202, 78,48);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.fundo-laranja h2 {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+}
+
+.fundo-laranja p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 25px;
+}
+
+.primeira-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 80px 0;
+}
+
+.primeira-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 30px;
+    max-width: 250px;
+    font-size: .8rem;
+    line-height: 20px;
+}
+
+.primeira-div h3 {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+figure img {
+    width: 50px;
+}
+
+.link_style {
+    background-color: rgb(172,0,71);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+}
+
+.segunda-section {
+    color: #333333;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.segunda-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.segunda-section > p {
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+.segunda-div {
+    display: inline-block;
+    max-width: 250px;
+}
+
+.segunda-div h3 {
+    text-transform: uppercase;
+}
+
+.segunda-div p {
+    line-height: 25px;
+    margin: 20px 0 50px;
+}
+
+.segunda-div .link_style {
+    padding: 15px 40px;
+}
+
+
+footer {
+    color: #ffffff3f;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 80px 0;
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 80px;
+}
+
+footer ul li a img {
+    width: 30px;
+    opacity: .8;
+}
