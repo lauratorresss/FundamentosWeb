@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Laboratório de JavaScript - Arrays e Datas (CEFET/RJ)</title>
+</head>
+<body>
+
+    <h1>CEFET/RJ - Campus Nova Friburgo</h1>
+    <h2>Fundamentos da Web / Programação de Clientes Web</h2>
+    <h3>Laboratório de JavaScript - Arrays e Datas</h3>
+    <hr>
+
+
+        <h2>Exercício 1: Filtrar inventores nascidos de 1500 a 1599</h2>
+        <p><strong>Enunciado:</strong> Faça uma função que filtre a lista de inventores para aqueles que nasceram de 1500 a 1599.</p>
+        <p><strong>Resultado:</strong></p>
+        <div id="resultado-1"></div>
+
+
+    <hr>
+
+
+        <h2>Exercício 2: Primeiros e últimos nomes dos inventores</h2>
+        <p><strong>Enunciado:</strong> Faça uma função que retorne um array com os primeiros e últimos nomes dos inventores.</p>
+        <p><strong>Resultado:</strong></p>
+        <div id="resultado-2"></div>
+
+
+    <hr>
+
+
+        <h2>Exercício 3: Ordenar por data de nascimento</h2>
+        <p><strong>Enunciado:</strong> Faça uma função que ordene o array de inventores pela data de nascimento, do mais antigo para o mais novo.</p>
+        <p><strong>Resultado:</strong></p>
+        <div id="resultado-3"></div>
+
+
+    <hr>
+
+        <h2>Exercício 4: Anos em que todos estiveram vivos juntos</h2>
+        <p><strong>Enunciado:</strong> Faça uma função que identifique por quantos anos todos os inventores estiveram vivos juntos.</p>
+        <p><strong>Resultado:</strong></p>
+        <div id="resultado-4"></div>
+
+
+    <hr>
+
+        <h2>Exercício 5: Ordenar por anos vividos (Longevidade)</h2>
+        <p><strong>Enunciado:</strong> Faça uma função que ordene os inventores pelos anos vividos.</p>
+        <p><strong>Resultado:</strong></p>
+        <div id="resultado-5"></div>
+
+    <hr>
+
+        <h2>Exercício 6: Remover redundâncias da lista</h2>
+        <p><strong>Enunciado:</strong> Crie uma função que remova as redundâncias da lista de veículos.</p>
+        <p><strong>Resultado:</strong></p>
+        <div id="resultado-6"></div>
+
+    <script>
+        const inventors = [
+            { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
+            { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
+            { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
+            { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
+            { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
+            { first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
+            { first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
+            { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
+            { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
+            { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
+            { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
+            { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
+        ];
+
+        const people = [
+            'Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Lloyd', 'Beckett, Samuel', 
+            'Blake, William', 'Berger, Ric', 'Beddoes, Mick', 'Beethoven, Ludwig', 'Belloc, Hilaire', 
+            'Begin, Menachem', 'Bellow, Saul', 'Benchley, Robert', 'Blair, Robert', 'Benenson, Peter', 
+            'Benjamin, Walter', 'Berlin, Irving', 'Benn, Tony', 'Benson, Leana', 'Bent, Silas', 
+            'Berle, Milton', 'Berry, Halle', 'Biko, Steve', 'Beck, Glenn', 'Bergman, Ingmar', 
+            'Black, Elk', 'Berio, Luciano', 'Berne, Eric', 'Berra, Yogi', 'Berry, Wendell', 
+            'Bevan, Aneurin', 'Ben-Gurion, David', 'Bevel, Ken', 'Biden, Joseph', 'Bennington, Chester', 
+            'Bierce, Ambrose', 'Billings, Josh', 'Birrell, Augustine', 'Blair, Tony', 'Beecher, Henry', 
+            'Biondo, Frank'
+        ];
+
+        const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+
+        // 1. Filtrar inventores nascidos de 1500 a 1599
+        function filtrarSeculo16(lista) {
+            return lista.filter(inventor => inventor.year >= 1500 && inventor.year <= 1599);
+        }
+
+        // 2. Array com primeiros e últimos nomes
+        function obterNomesCompletos(lista) {
+            return lista.map(inventor => `${inventor.first} ${inventor.last}`);
+        }
+
+        // 3. Ordenar por data de nascimento (mais antigo ao mais novo)
+        function ordenarPorNascimento(lista) {
+            return [...lista].sort((a, b) => a.year - b.year);
+        }
+
+        // 4. Anos vividos todos juntos (Interseção dos intervalos [year, passed])
+        function calcularAnosJuntos(lista) {
+            const ultimoNascimento = Math.max(...lista.map(inv => inv.year));
+            const primeiraMorte = Math.min(...lista.map(inv => inv.passed));
+            const anosJuntos = primeiraMorte - ultimoNascimento;
+
+            return {
+                ultimoNascimento,
+                primeiraMorte,
+                anosJuntos: anosJuntos > 0 ? anosJuntos : 0
+            };
+        }
+
+        // 5. Ordenar por anos vividos (longevidade)
+        function ordenarPorAnosVividos(lista) {
+            return [...lista].map(inv => ({
+                ...inv,
+                anosVividos: inv.passed - inv.year
+            })).sort((a, b) => b.anosVividos - a.anosVividos);
+        }
+
+        // 6. Remover redundâncias
+        function removerRedundancias(lista) {
+            return Array.from(new Set(lista));
+        }
+
+
+        // Exercício 1
+        const res1 = filtrarSeculo16(inventors);
+        let html1 = '<ul>';
+        res1.forEach(inv => {
+            html1 += `<li>${inv.first} ${inv.last} (Nascimento: ${inv.year}, Falecimento: ${inv.passed})</li>`;
+        });
+        html1 += '</ul>';
+        document.getElementById('resultado-1').innerHTML = html1;
+
+        // Exercício 2
+        const res2 = obterNomesCompletos(inventors);
+        let html2 = '<ul>';
+        res2.forEach(nome => {
+            html2 += `<li>${nome}</li>`;
+        });
+        html2 += '</ul>';
+        document.getElementById('resultado-2').innerHTML = html2;
+
+        // Exercício 3
+        const res3 = ordenarPorNascimento(inventors);
+        let html3 = '<ol>';
+        res3.forEach(inv => {
+            html3 += `<li>${inv.first} ${inv.last} - Ano de Nascimento: ${inv.year}</li>`;
+        });
+        html3 += '</ol>';
+        document.getElementById('resultado-3').innerHTML = html3;
+
+        // Exercício 4
+        const res4 = calcularAnosJuntos(inventors);
+        let html4 = `<p>Último ano de nascimento entre os inventores: <strong>${res4.ultimoNascimento}</strong></p>`;
+        html4 += `<p>Primeiro ano de falecimento entre os inventores: <strong>${res4.primeiraMorte}</strong></p>`;
+        html4 += `<p>Total de anos que todos viveram simultaneamente: <strong>${res4.anosJuntos} anos</strong></p>`;
+        html4 += `<p><em>Nota: Como o primeiro falecimento ocorreu em ${res4.primeiraMorte} e o último inventor só nasceu em ${res4.ultimoNascimento}, não houve nenhum período em que todos os 12 estivessem vivos juntos.</em></p>`;
+        document.getElementById('resultado-4').innerHTML = html4;
+
+        // Exercício 5
+        const res5 = ordenarPorAnosVividos(inventors);
+        let html5 = '<ol>';
+        res5.forEach(inv => {
+            html5 += `<li>${inv.first} ${inv.last} - Viveu ${inv.anosVividos} anos (${inv.year} a ${inv.passed})</li>`;
+        });
+        html5 += '</ol>';
+        document.getElementById('resultado-5').innerHTML = html5;
+
+        // Exercício 6
+        const res6 = removerRedundancias(data);
+        let html6 = '<p>Array sem duplicidades: <code>[' + res6.map(item => `'${item}'`).join(', ') + ']</code></p>';
+        html6 += '<ul>';
+        res6.forEach(item => {
+            html6 += `<li>${item}</li>`;
+        });
+        html6 += '</ul>';
+        document.getElementById('resultado-6').innerHTML = html6;
+    </script>
+
+</body>
+</html>
